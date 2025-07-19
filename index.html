@@ -1,0 +1,628 @@
+<html lang="en">
+<head>
+  <meta charset="UTF-8"></meta>
+  <meta content="width=device-width, initial-scale=1" name="viewport"></meta>
+  <title>Three Slideshows</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+
+   <!-- Meta Description for SEO -->
+  <meta content="Explore Sahyaadri Villa — a peaceful riverside farmhouse with a pool, great views, and serene vibes in Karjat." name="description"></meta>
+
+  <!-- Open Graph Meta Tags -->
+<meta content="Sahyaadri Villa - Riverside Retreat in Karjat" property="og:title"></meta>
+<meta content="Explore Sahyaadri Villa — a peaceful riverside farmhouse with a pool, great views, and serene vibes." property="og:description"></meta>
+<meta content="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEinwDRFaj_svRnfzouNXde10j1WklIEVLxl4VNN0EaxhcNpwuZGKpqLUFYgHbtpv1cEwks-2OH3dPuuQnSBP5Io5ZeitEBNiY_JX1OnSaLiigk1JOeXyJxP8AiRXzoRb1E2A1JagtBVYNvZbzlhr0CQKfFGIw7pQK9zJuFQqgN3nyse04WCeLBfmgTeyDs/s3360/front2.jpeg" property="og:image"></meta>
+<meta content="https://sahyaadrivilla.com" property="og:url"></meta>
+<meta content="website" property="og:type"></meta>
+
+<meta content="summary_large_image" name="twitter:card"></meta>
+<meta content="Sahyaadri Villa - Riverside Retreat in Karjat" name="twitter:title"></meta>
+<meta content="A short description." name="twitter:description"></meta>
+<meta content="https://example.com/path/to/image.jpg" name="twitter:image"></meta>
+
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet"></link>
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@500&display=swap');
+    @import url('https://fonts.googleapis.com/css2?family=Raleway:wght@800&display=swap');
+
+    body {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    align-items: center;
+      background: #fff !important;
+      color: white;
+      font-family: Arial;
+      text-align: center;
+      margin: 0;
+      padding: 0px !important;
+    }
+    div#blog-pager {
+    display: none !important;
+}
+    div#Attribution1 {
+    display: none !important;
+}
+    div#page_body {
+    padding: 0 !important;
+}
+    
+    .post-footer {
+    display: none !important;
+}
+.mobile .content-outer {
+    -webkit-box-shadow: none !important;
+    box-shadow: none !important;
+}
+html .main-outer {
+    margin: 0 !important;
+    padding: 0;
+}
+    header {
+      display : none !important;
+    }
+    
+    div#navbar {
+    display: none !important;
+}
+
+    h1 {
+    color: #a6a6a6;
+    font-family: cursive;
+    font-weight: normal;
+    font-size: 22px;
+    margin: 0;
+    padding: 10px 0 10px 0;
+}
+
+   p.tagline {
+    font-size: 1.5em;
+    font-style: italic;
+    color: #5c5346;
+    margin-top: 0;
+    padding: 10px;
+}
+    
+    .date-outer {
+    padding: 0 !important;
+}
+
+    .sahya-wrapper {
+      position: relative;
+      max-width: 600px;
+      margin: 0px;
+    }
+    
+    .content-inner {
+    background-color: transparent !important;
+}
+    
+    h3.post-title.entry-title {
+    display: none !important;
+}
+
+    .mobile .main-inner, .mobile .footer-inner {
+    background-color: transparent !important;
+}
+
+.column-center-outer, .column-left-outer, .column-right-outer {
+    /* position: relative; */
+    float: none !important;
+    _display: inline;
+    _overflow: hidden;
+}
+.blog-feeds {
+    display: none !important;
+}
+.content-outer, .content-fauxcolumn-outer, .region-inner {
+    min-width: 100% !important;
+    max-width: 100% !important;
+}
+.content {
+    width: 100% !important;
+}
+    .sahya-wrapper input {
+      display: none;
+    }
+
+    .sahya-carousel {
+      overflow: hidden;
+      border-radius: 15px;
+    }
+
+    .sahya-carousel ul {
+      display: flex;
+      width: 500%;
+      margin: 0;
+      padding: 0 !important;
+      position: relative;
+      left: 0;
+      list-style: none;
+      transition: left 0.8s cubic-bezier(0.77, 0, 0.175, 1);
+    }
+
+    .sahya-carousel li {
+      width: 100%;
+      border-radius: 15px;
+    }
+
+    .sahya-carousel img {
+      width: 100%;
+      height: 100%;
+      display: block;
+      border-radius: 15px;
+      box-sizing: border-box;
+    }
+    
+    .post-body img, .post-body .tr-caption-container, .Profile img, .Image img, .BlogList .item-thumbnail img {
+    padding: 0 !important;
+    background: #adac84;
+    border: 0px solid #eeeeee !important;
+    -moz-box-shadow: 1px 1px 5px rgba(0, 0, 0, .1);
+    -webkit-box-shadow: 1px 1px 5px rgba(0, 0, 0, .1);
+    box-shadow: 1px 1px 5px rgba(0, 0, 0, .1);
+}
+
+    .sahya-dot {
+      display: none;
+      position: absolute;
+      bottom: -30px;
+      width: 15px;
+      height: 15px;
+      background-color: white;
+      opacity: 0.5;
+      border-radius: 50%;
+      cursor: pointer;
+      transition: 0.4s;
+    }
+
+    .sahya-dot:hover { opacity: 0.8; transform: scale(1.2); }
+    .sahya-dot:active { transform: scale(0.9); }
+
+    .sahya-dot:nth-of-type(1) { left: 43%; }
+    .sahya-dot:nth-of-type(2) { left: 47%; }
+    .sahya-dot:nth-of-type(3) { left: 51%; }
+    .sahya-dot:nth-of-type(4) { left: 55%; }
+    .sahya-dot:nth-of-type(5) { left: 59%; }
+
+    .sahya-left-arrow, .sahya-right-arrow {
+      display: none;
+      position: absolute;
+      top: 50%;
+      font-size: 50px;
+      margin-top: -25px;
+      cursor: pointer;
+      font-weight: bold;
+      opacity: 0.7;
+      z-index: 1;
+    }
+
+    .sahya-left-arrow:hover, .sahya-right-arrow:hover {
+      opacity: 1;
+      transform: scale(1.2);
+    }
+
+    .post-body img, .post-body .tr-caption-container, .Profile img, .Image img, .BlogList .item-thumbnail img {
+    padding: 0px !important;
+    background: transparent !important;
+    border: 0px solid #eeeeee !important;
+    -moz-box-shadow: 1px 1px 5px rgba(0, 0, 0, .1);
+    -webkit-box-shadow: 1px 1px 5px rgba(0, 0, 0, .1);
+    box-shadow: none !important;
+}
+
+    .sahya-left-arrow:active, .sahya-right-arrow:active {
+      transform: scale(0.9);
+    }
+
+    .sahya-left-arrow { left: 15px; }
+    .sahya-right-arrow { right: 15px; }
+
+    #sahya-slide1:checked ~ .sahya-carousel ul { left: 0%; padding: 0;}
+    #sahya-slide2:checked ~ .sahya-carousel ul { left: -100%; }
+    #sahya-slide3:checked ~ .sahya-carousel ul { left: -200%; }
+    #sahya-slide4:checked ~ .sahya-carousel ul { left: -300%; }
+    #sahya-slide5:checked ~ .sahya-carousel ul { left: -400%; }
+
+    #sahya-slide1:checked ~ .sahya-dot:nth-of-type(1),
+    #sahya-slide2:checked ~ .sahya-dot:nth-of-type(2),
+    #sahya-slide3:checked ~ .sahya-dot:nth-of-type(3),
+    #sahya-slide4:checked ~ .sahya-dot:nth-of-type(4),
+    #sahya-slide5:checked ~ .sahya-dot:nth-of-type(5) {
+      opacity: 1;
+    }
+
+    #sahya-slide1:checked ~ .sahya-left-arrow[for=sahya-slide5],
+    #sahya-slide1:checked ~ .sahya-right-arrow[for=sahya-slide2],
+    #sahya-slide2:checked ~ .sahya-left-arrow[for=sahya-slide1],
+    #sahya-slide2:checked ~ .sahya-right-arrow[for=sahya-slide3],
+    #sahya-slide3:checked ~ .sahya-left-arrow[for=sahya-slide2],
+    #sahya-slide3:checked ~ .sahya-right-arrow[for=sahya-slide4],
+    #sahya-slide4:checked ~ .sahya-left-arrow[for=sahya-slide3],
+    #sahya-slide4:checked ~ .sahya-right-arrow[for=sahya-slide5],
+    #sahya-slide5:checked ~ .sahya-left-arrow[for=sahya-slide4],
+    #sahya-slide5:checked ~ .sahya-right-arrow[for=sahya-slide1] {
+      display: block;
+    }
+    .tag-cloud {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 5px;
+      padding: 0px;
+    }
+    .tag {
+    background: #ffffff;
+    border: 1px solid #ffffff;
+    border-radius: 50px;
+    padding: 8px 12px;
+    margin: 2px 1px;
+    font-size: 16px;
+    color: #333;
+    font-family: math;
+    display: flex;
+    align-items: baseline;
+    gap: 10px;
+    box-shadow: 0 2px 5px rgb(0 0 0 / 13%);
+    transition: transform 0.2s, background 0.3s;
+    cursor: default;
+}
+    .tag:hover {
+      background: #e6f7ff;
+      transform: scale(1.05);
+    }
+    .tag i {
+      color: #5a8dee;
+      font-size: 15px;
+    }
+    .contact-info {
+     width: 100%;
+    display: flex
+;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 5px;
+    margin-top: 0px;
+    margin-bottom: 10px;
+    position: sticky;
+    top: 0px;
+    z-index: 11;
+    background: #f8ebc2;
+  }
+
+  .contact-item {
+    text-align: center;
+    text-decoration: none;
+    color: #333;
+    font-family: 'Segoe UI', sans-serif;
+    border-radius: 12px;
+    padding: 5px;
+  }
+
+  .contact-item i {
+    font-size: 24px;
+    margin-bottom: 0px;
+    display: block;
+    color: #007BFF;
+  }
+
+  .contact-label {
+    font-size: 14px;
+    margin-top: 5px;
+  }
+   .farm-footer {
+    width: -webkit-fill-available;
+    background-color: #f4f4f4;
+    color: #333;
+    padding: 30px 20px;
+    font-family: 'Segoe UI', sans-serif;
+    text-align: center;
+    border-top: 1px solid #ddd;
+  }
+
+  .footer-container {
+    max-width: 900px;
+    margin: 0 auto;
+  }
+
+  .footer-title {
+    font-size: 25px;
+    font-family: sans-serif;
+    font-weight: 600;
+    margin-bottom: 15px;
+    color: #2c3e50;
+  }
+
+  .footer-contact {
+        font-size: 17px;
+    font-family: math;
+    line-height: 1.8;
+  }
+
+  .footer-contact a {
+    color: #007BFF;
+    text-decoration: none;
+  }
+
+  .footer-contact a:hover {
+    text-decoration: underline;
+  }
+
+  .footer-note {
+    margin-top: 20px;
+    font-size: 13px;
+    color: #777;
+  }
+    .slide {
+      position: absolute;
+      inset: 0;
+      display: none;
+    }
+    .slide.active {
+      display: block;
+    }
+    .bg-gray-100.flex.flex-col.items-center.justify-center.min-h-screen.space-y-12.py-12 {
+    background: none !important;
+    margin: 0 !important;
+    padding: 0 !important;
+}
+    .space-y-12 > :not([hidden]) ~ :not([hidden]) {
+    --tw-space-y-reverse: 0;
+    margin-top: 0 !important;
+    margin-bottom: 0 !important;
+}
+
+  </style>
+<style>
+    .typing-container {
+          padding: 20px 0 10px 0;
+    color: #6ea97e;
+    font-family: monospace;
+    font-size: 2em;
+    white-space: nowrap;
+    overflow: hidden;
+    /* border-right: 3px solid orange; */
+    /* width: fit-content; */
+    animation: typing 4s steps(50, end) infinite, blink 0.7s infinite;
+    }
+
+    @keyframes typing {
+      from { width: 0 }
+      to { width: 100% }
+    }
+
+    @keyframes blink {
+      0%   { border-color: orange; }
+      49%  { border-color: orange; }
+      50%  { border-color: transparent; }
+      100% { border-color: transparent; }
+    }
+  </style>
+</head>
+
+<body>
+
+  <div class="main-body-farm" style="display: flex; flex-direction: column;align-items: center;padding: 10px;background: #fbfae3;">
+<div style="width: 100%;padding: 10px 10px 0 10px;display: flex;flex-direction: column;align-items: center;background: #f8ebc2">
+<div>
+  <img alt="Farmhouse Logo" src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEj0utGSHmshRNUzNdbHnaDPF65_Y45QHccypQBtlbzSjssonjtMfEm3r8q7E1AawxtNbXjvZr6j5cLqkJydvj8xrZaYnENjfhwQCxm-epea2tCsC0Zerqp6dPF9Sz-njDnDoZZdVkuHWdlhNxCNiKU0SRNfZXC44sfhnuDPy0QvB8awhGvlr58S3zCNtfc/s16000/Sahyaadri%20VIlla%20Marathi%20English.png" style="height: 75px; margin-top: 15px; max-width: 800px; padding: 0 !important; width: 100%;" />
+</div>
+ <p style="color: #9eb9a1; margin: 0 0 10px 0; padding: 0;">- Github Karjat, Raigad</p>
+
+
+</div>
+    <div class="contact-info">
+  <a class="contact-item" href="https://maps.app.goo.gl/yUGPsNhZc5QwzpRt5?g_st=ac" target="_blank">
+    <i class="fas fa-map-marker-alt" style="color: #2d6a7f;"></i>
+    
+  </a>
+
+  <a class="contact-item" href="tel:+917020501199">
+    <i class="fas fa-phone-alt" style="color: #ae690d;"></i>
+  </a>
+
+  <a class="contact-item" href="mailto:sahyaadrivilla@gmail.com">
+    <i class="fas fa-envelope" style="color: #6a6a6a;"></i>
+    
+  </a>
+
+  <a class="contact-item" href="https://wa.me/7020501199" target="_blank">
+  <i class="fab fa-whatsapp" style="color: #00e000;"></i>
+  
+</a>
+</div>
+<hr style="border: 1px solid #c7decc; width: 100%;" />
+
+<div class="typing-container">
+  Welcome !
+</div>
+<h1>Your Riverside Retreat in the Heart of the Sahyaadri’s 🏞️ !</h1>
+
+<hr style="border: 1px solid #c7decc; width: 100%;" />
+
+<br>
+<p style="color: #a3a09c; font-family: system-ui; font-size: 17px;">
+    Take a visual tour of Sahyaadri Villa — our riverside farmhouse in Karjat. Explore stunning river views, a refreshing poolside escape, and the peaceful beauty of the villa under the stars. Each picture captures a moment of relaxation, comfort, and nature.
+  </p>
+  
+  <h2 style="color: #575757; font-size: 22px; font-weight: bold; margin: 15px 0 10px 0; padding: 0;">Gallery</h2>
+
+<div class="bg-gray-100 flex flex-col items-center justify-center min-h-screen space-y-12 py-12" style="width: 100%;">
+
+  <h2 style="color: #5a777e; font-family: monospace; font-size: 20px; font-weight: bold; padding: 10px;">Riverside Bliss</h2>
+
+  <!-- Slideshow 1 -->
+  <div class="relative w-full max-w-3xl mx-auto overflow-hidden rounded-lg shadow-lg" id="slideshow1" style="height: 24rem; width: 100%;">
+    <img alt="Slide 1" class="slide active w-full h-96 object-cover" src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEhVAbr6JEDYPzVJioNfBPPjabzqcAF_8XBW_IeR-6mSHaZTy5OjIOBr0DWgbC27p1SS33vsUJMiZUFKdKg6yOVWv9XBd-H2abmSywX_ZMPXzUsb8rswrfeVT9L2LDVkhUILq0vhpVi0r7RQAGG__sAbcSlV1t8NwaTdf8OKruThZxCQAD2ew5rjYIL_pcE/s4032/river1.jpeg" />
+    <img alt="Slide 2" class="slide w-full h-96 object-cover" src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEgz_FO2vxGFy0sB7EHPhMGsacvPHbGhCS4OQyRxzRsNNZtVJcSbEzHObdUZsPvkcycdD22zayvPYLfeqx8Em9yIdlzHOEnjkydWS1v8qAj31HhETivULfmXb_0xxUKMhYplv6QJy6NJnnQWXtdZ0yZJ-a86UHO0tu8R8aSTc2nRVkL2zZ9r0U9pll2w90Y/s2667/riverside.jpeg" />
+    <img alt="Slide 3" class="slide w-full h-96 object-cover" src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEinwDRFaj_svRnfzouNXde10j1WklIEVLxl4VNN0EaxhcNpwuZGKpqLUFYgHbtpv1cEwks-2OH3dPuuQnSBP5Io5ZeitEBNiY_JX1OnSaLiigk1JOeXyJxP8AiRXzoRb1E2A1JagtBVYNvZbzlhr0CQKfFGIw7pQK9zJuFQqgN3nyse04WCeLBfmgTeyDs/s3360/front2.jpeg" />
+    <button class="prevBtn absolute left-4 top-1/2 transform -translate-y-1/2 bg-black/50 text-white p-3 rounded-full hover:bg-black/70 z-10">❮</button>
+    <button class="nextBtn absolute right-4 top-1/2 transform -translate-y-1/2 bg-black/50 text-white p-3 rounded-full hover:bg-black/70 z-10">❯</button>
+    <div class="dots absolute bottom-4 left-1/2 transform -translate-x-1/2 flex space-x-2 z-10"></div>
+  </div>
+
+   <h2 style="color: #5a777e; font-family: monospace; font-size: 20px; font-weight: bold; padding: 10px;">Poolside Paradise</h2>
+
+  <!-- Slideshow 2 -->
+  <div class="relative w-full max-w-3xl mx-auto overflow-hidden rounded-lg shadow-lg" id="slideshow2" style="height: 24rem;">
+    <img alt="Slide 3" class="slide w-full h-96 object-cover" src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEjuJgkb_GfWlJE154MX0MC41KSRLH7rIZopha3sJYkcrdkk9MgjtuNHnCZn6Q4rKIY2SgpUXH4vuyz0pR9Xt5UmIrSMoTaZ2Y6-QFX_TAJ6cCt13VcCD-tDhKv5N1sdeZwJ07-9zoEY16ZV05FZbKHzloWjewzxhyAwLjRI4I8axqiqEk7RhL2PJlbnK0Y/s3360/pool2.jpeg" />
+    <img alt="Slide 1" class="slide active w-full h-96 object-cover" src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEiCSE0yTShCAMj_uTzc7wHTCvWxluqJCZRKLgmE9JC8TryX4Taa1XUX0NlMJmjL1yZHJ7dpVrCQLTrbirYPLgLo_xPku_ZnA2uh0MmBU_45pM0LBHyBRnnQVT4_5FEclJYHyDug5Z3EAoAnXJv2l84-VXpE2wOJdKCX1ahbZexTCXP9AvU6M9l2tEkZ2e4/s3360/pool.jpeg" />
+    <img alt="Slide 2" class="slide w-full h-96 object-cover" src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEiAVo4e5w7Ffd51X0AnFJ4IBJ3gX9mCRU6-EdE5KvcnIoZUHfqPoyc5ei2yCvGyDsEfn76b25IDcW-YXFHvv29jt5FYkfMZr0ApM7ZeYyyzvS_Wr68hMuYWrG-yVkGcEY_fHVtwXUl8yffwJ8hPTT6Lu5IqZjz-KJS8G08JEB74K_l6P-_tcHQm0u00jww/s4032/pooltop.jpeg" />
+    <button class="prevBtn absolute left-4 top-1/2 transform -translate-y-1/2 bg-black/50 text-white p-3 rounded-full hover:bg-black/70 z-10">❮</button>
+    <button class="nextBtn absolute right-4 top-1/2 transform -translate-y-1/2 bg-black/50 text-white p-3 rounded-full hover:bg-black/70 z-10">❯</button>
+    <div class="dots absolute bottom-4 left-1/2 transform -translate-x-1/2 flex space-x-2 z-10"></div>
+  </div>
+
+   <h2 style="color: #5a777e; font-family: monospace; font-size: 20px; font-weight: bold; padding: 10px;">Evenings at Sahyaadri</h2>
+
+  <!-- Slideshow 3 -->
+  <div class="relative w-full max-w-3xl mx-auto overflow-hidden rounded-lg shadow-lg" id="slideshow3" style="height: 24rem;">
+    <img alt="Slide 1" class="slide active w-full h-96 object-cover" src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEi5_VLU41QVFxFGGfKcP7SgJc9ke8ryY-EaxZxNnzoyBbaccK6vjGsRyIrcm5kZVhsIgFdBscPLjRN05j16QI5rCWbZioUsDAJoJmxHeMLfIGqfaMncwcIyNd8W9QF_pCFmLchqswv07MoGRrsvjAxsJjYTw_djEPi4cwJs9kk0WJ9DFwxYProuxHScikI/s4032/eve3.jpeg" />
+    <img alt="Slide 2" class="slide w-full h-96 object-cover" src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEjGzyLLI7N06qUKgZjfa882arja9oiyUy6woSq_UDRFy3HEoEkjs-AtOxg1S9b50deImv42rXLxF671rFjJSTgn4ALf5zucWqv5_Xv-OmiuP_gDLJ-jhpux0gt-oxXdUkq07iXSowyTLsHIb0KFqnVpsqQ114xVepvoAAOye_qDsAslI-SwQU3x1VIi7co/s4032/eve.jpeg" />
+    <img alt="Slide 3" class="slide w-full h-96 object-cover" src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEgcIg8tqfz2U2je1mqg3qv7VYeMiZ1dPGHpI8zLl0ZfG-K3AXoQ6ew2FPYAlHz4-Wz70ar9X93lK-MCcMddFGk9iupGlhL0eEV9h245UxAk3TfUj-HHqOwTzPGNZNF15H6Myx5Dx1HQUyCR87-uPevdI8r76nzGO8mFHnOwg3dYFa-5OC5n5FBi2qBMVZE/s4032/eve5.jpeg" />
+    <button class="prevBtn absolute left-4 top-1/2 transform -translate-y-1/2 bg-black/50 text-white p-3 rounded-full hover:bg-black/70 z-10">❮</button>
+    <button class="nextBtn absolute right-4 top-1/2 transform -translate-y-1/2 bg-black/50 text-white p-3 rounded-full hover:bg-black/70 z-10">❯</button>
+    <div class="dots absolute bottom-4 left-1/2 transform -translate-x-1/2 flex space-x-2 z-10"></div>
+  </div>
+
+<script>
+  function createSlideshow(slideshow) {
+    const slides = slideshow.querySelectorAll('.slide');
+    const prevBtn = slideshow.querySelector('.prevBtn');
+    const nextBtn = slideshow.querySelector('.nextBtn');
+    const dotsContainer = slideshow.querySelector('.dots');
+
+    let current = 0;
+    let autoSlideInterval;
+    const autoSlideDelay = 5000;
+
+    // Create dots dynamically  
+    slides.forEach((_, i) => {
+      const dot = document.createElement('div');
+      dot.className = 'w-3 h-3 rounded-full cursor-pointer transition-all duration-300 bg-gray-400';
+      if (i === 0) dot.classList.replace('bg-gray-400', 'bg-white');
+      dot.addEventListener('click', () => {
+        goToSlide(i);
+        resetAutoSlide();
+      });
+      dotsContainer.appendChild(dot);
+    });
+
+    const dots = dotsContainer.children;
+
+    function showSlide(index) {
+      slides.forEach((slide, i) => {
+        slide.classList.toggle('active', i === index);
+        dots[i].classList.toggle('bg-white', i === index);
+        dots[i].classList.toggle('bg-gray-400', i !== index);
+      });
+    }
+
+    function prevSlide() {
+      current = (current - 1 + slides.length) % slides.length;
+      showSlide(current);
+    }
+
+    function nextSlide() {
+      current = (current + 1) % slides.length;
+      showSlide(current);
+    }
+
+    function goToSlide(index) {
+      current = index;
+      showSlide(current);
+    }
+
+    prevBtn.addEventListener('click', () => {
+      prevSlide();
+      resetAutoSlide();
+    });
+
+    nextBtn.addEventListener('click', () => {
+      nextSlide();
+      resetAutoSlide();
+    });
+
+    // Swipe handling
+    let touchStartX = 0;
+    let touchEndX = 0;
+
+    slideshow.addEventListener('touchstart', e => {
+      touchStartX = e.changedTouches[0].screenX;
+    });
+
+    slideshow.addEventListener('touchend', e => {
+      touchEndX = e.changedTouches[0].screenX;
+      handleSwipe();
+    });
+
+    function handleSwipe() {
+      const threshold = 50; // Minimum swipe distance
+      if (touchEndX < touchStartX - threshold) {
+        nextSlide();
+        resetAutoSlide();
+      } else if (touchEndX > touchStartX + threshold) {
+        prevSlide();
+        resetAutoSlide();
+      }
+    }
+
+    // Auto slide
+    function startAutoSlide() {
+      autoSlideInterval = setInterval(() => {
+        nextSlide();
+      }, autoSlideDelay);
+    }
+
+    function resetAutoSlide() {
+      clearInterval(autoSlideInterval);
+      startAutoSlide();
+    }
+
+    // Init
+    showSlide(current);
+    startAutoSlide();
+  }
+
+  // Initialize all slideshows
+  document.querySelectorAll('[id^="slideshow"]').forEach(slideshow => {
+    createSlideshow(slideshow);
+  });
+</script>
+
+</div>
+  <br />
+<hr style="border: 1px solid #c7decc; width: 100%;" />
+  <h2 style="color: #4f6469; font-size: 22px; font-weight: bold; margin: 15px 0 0 0; padding: 0;">Your Farmhouse Experience Includes</h2>
+  <div class="tag-cloud">
+    <!-- <div class="tag"><i class="fas fa-wifi"></i>WiFi</div> -->
+    <div class="tag"><i class="fas fa-car"></i>Parking</div>
+    <div class="tag"><i class="fas fa-utensils"></i>Meals</div>
+    <div class="tag"><i class="fas fa-chess-board"></i>Indoor Games</div>
+    <div class="tag"><i class="fas fa-swimmer"></i>Swimming Pool</div>
+    <div class="tag"><i class="fas fa-snowflake"></i>Air Cond.</div>
+    <div class="tag"><i class="fas fa-dog"></i>Pet Friendly</div>
+    <div class="tag"><i class="fas fa-chair"></i>Outdoor Seating</div>
+    <div class="tag"><i class="fas fa-bolt"></i>24/7 Power Backup</div>
+  </div>
+</div>
+
+<div class="farm-footer">
+  <div class="footer-container">
+    <div class="footer-title">Contact Us</div>
+
+    <div class="footer-contact">
+      📞 Phone: <a href="tel:+917020501199">+91 7020501199</a><br />
+      📍 Address: Sahyaadri Villa, khandpe road, village Adivali, Karjat, Maharashtra, 410201.<br />
+      ✉️ Email: <a href="mailto:sahyaadrivilla@gmail.com">sahyaadrivilla@gmail.com</a>
+    </div>
+
+    <div class="footer-note">
+      © 2025 Sahyaadri Villa. All rights reserved.
+    </div>
+  </div>
+</div>
+
+</body>
+
+</html>
